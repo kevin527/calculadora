@@ -1,87 +1,97 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Documento sin t&iacute;tulo</title>
+	<title>Calculadora</title>
+  <meta charset="UTF-8">
+ <link type="text/css" rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="operaciones.js"></script>
 </head>
 
+
 <body>
-<table width="200" border="1">
+<form name="kevin">
+<table width="200" height="216" border="1" cellspacing="0" bordercolor="#000099" bgcolor="#FFFFCC">
   <tr>
-    <td colspan="10">&nbsp;</td>
+    <td colspan="10" id="vista"><div align="center">
+      <input name="valores" type="text" id="valores" onKeyPress="return solonumeros(event)" value="">
+    </div></td>
   </tr>
   <tr>
     <td><label>
-      <input type="submit" name="1" id="1" value="1" />
+      <input type="button"  value="1" onClick="capturar(value)"/>
     </label></td>
     <td><label>
-      <input type="submit" name="2" id="2" value="2" />
+      <input type="button"  value="2" onClick="capturar(value)"  />
     </label></td>
     <td><label>
-      <input type="submit" name="3" id="3" value="3" />
+      <input type="button"  value="3"  onclick="capturar(value)"/>
     </label></td>
     <td><label>
-      <input type="submit" name="4" id="4" value="4" />
+      <input type="button"  value="4"  onclick="capturar(value)"/>
     </label></td>
     <td><label>
-      <input type="submit" name="5" id="5" value="5" />
+      <input type="button"  value="5"  onclick="capturar(value)"/>
     </label></td>
     <td><label>
-      <input type="submit" name="6" id="6" value="6" />
+      <input type="button"  value="6"  onclick="capturar(value)" />
     </label></td>
     <td><label>
-      <input type="submit" name="7" id="7" value="7" />
+      <input type="button"  value="7"  onclick="capturar(value)"/>
     </label></td>
     <td><label>
-      <input type="submit" name="8" id="8" value="8" />
+      <input type="button" value="8"  onclick="capturar(value)"/>
     </label></td>
     <td><label>
-      <input type="submit" name="9" id="9" value="9" />
+      <input type="button"  value="9"  onclick="capturar(value)"/>
     </label></td>
     <td><label>
-      <input type="submit" name="0" id="0" value="0" />
+      <input type="button"  value="0"  onclick="capturar(value)"/>
     </label></td>
   </tr>
   <tr>
     <td><label>
-      <input type="submit" name="suma" id="suma" value="+" />
+      <input type="button"  value="+" onClick="comprobar(value)"/>
     </label></td>
     <td><label>
-      <input type="submit" name="resta" id="resta" value="-" />
+      <input type="button"  value="-" onClick="comprobar(value)"/>
     </label></td>
     <td><label>
-      <input type="submit" name="multiplicar" id="multiplicar" value="x" />
+      <input type="button"  value="*" onClick="comprobar(value)" />
     </label></td>
     <td><label>
-      <input type="submit" name="dividir" id="dividir" value="/" />
+      <input type="button"  value="/" onClick="comprobar(value)"/>
     </label></td>
     <td colspan="2"><label>
       <div align="center">
-        <input type="submit" name="raiz" id="raiz" value="√ " />
+        <input type="button"  value="√ " />
         </div>
     </label>      <label></label>
     <div align="center"></div></td>
     <td colspan="2"><div align="center">
-      <input type="submit" name="potencia" id="potencia" value="x^2" />
+      <input type="button"  value="x^2" />
     </div></td>
-    <td colspan="2">&nbsp;</td>
+    <td colspan="2"><label>
+      <div align="center">
+        <input type="button"  value="C" onClick="borrar()" >
+        </div>
+    </label></td>
   </tr>
   <tr>
     <td colspan="2"><label>
-      <input type="submit" name="senx" id="senx" value="sen x" />
+      <input type="button"  value="sen x" />
     </label></td>
     <td colspan="2"><label>
-      <input type="submit" name="cosx" id="cosx" value="cos x" />
+      <input type="button"  value="cos x" />
     </label></td>
     <td colspan="2"><label>
-      <input type="submit" name="tanx" id="tanx" value="tan x" />
+      <input type="button"  value="tan x" />
     </label></td>
     <td colspan="4"><label>
       <div align="center">
-        <input type="submit" name="igual" id="igual" value="=" />
+        <input type="button" value="=" onClick="calcular()" />
         </div>
     </label></td>
   </tr>
 </table>
+</form>
 </body>
 </html>
