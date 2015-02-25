@@ -1,7 +1,7 @@
-function capturar(num){
+function capturar(numeros){
 
 	var anterior=document.kevin.valores.value;
-	document.getElementById("valores").value=anterior+num;
+	document.getElementById("valores").value=anterior+numeros;
 }
 
 
@@ -11,16 +11,21 @@ function borrar()
 	document.kevin.valores.value="";
 
 }
+function square(kevin) 
+{
+	kevin.valores.value = eval(kevin.valores.value) * eval(kevin.valores.value)
+}
+
 
 //Signos
-function comprobar(num){
+function operar(numeros){
 
 	var anterior=document.kevin.valores.value;
 	if(anterior==""){
 		document.kevin.valores.value="";
     }else{
     	var anterior=document.kevin.valores.value;
-    	document.getElementById("valores").value=anterior+num;
+    	document.getElementById("valores").value=anterior+numeros;
     	esto=document.kevin.valores.value;
 
 		record=0;
@@ -30,7 +35,7 @@ function comprobar(num){
 		var letra=""
 
 		for(a=1;a<esto.length;a++){
-			if(esto.charAt(a)=="+"||esto.charAt(a)=="-"||esto.charAt(a)=="*"||esto.charAt(a)=="/"){
+			if(esto.charAt(a)=="+"||esto.charAt(a)=="-"||esto.charAt(a)=="*"||esto.charAt(a)=="/"||esto.charAt(a)=="sqrt"){
 				igual=igual+1;
 				letra=esto.charAt(a);
 			}else{

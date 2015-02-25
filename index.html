@@ -49,20 +49,21 @@
   </tr>
   <tr>
     <td><label>
-      <input type="button"  value="+" onClick="comprobar(value)"/>
+      <input type="button"  value="+" onClick="operar(value)"/>
     </label></td>
     <td><label>
-      <input type="button"  value="-" onClick="comprobar(value)"/>
+      <input type="button"  value="-" onClick="operar(value)"/>
     </label></td>
     <td><label>
-      <input type="button"  value="*" onClick="comprobar(value)" />
+      <input type="button"  value="*" onClick="operar(value)" />
     </label></td>
     <td><label>
-      <input type="button"  value="/" onClick="comprobar(value)"/>
+      <input type="button"  value="/" onClick="operar(value)"/>
     </label></td>
     <td colspan="2"><label>
       <div align="center">
-        <input type="button"  value="√ " />
+        <input type="button"  value="sqrt"  onClick="if (checkNum(this.form.display.value))
+	{ square(this.form) }" />
         </div>
     </label>      <label></label>
     <div align="center"></div></td>
