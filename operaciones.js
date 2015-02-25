@@ -26,6 +26,31 @@ function potencia(){
       document.kevin.valores.value=resultado;
  	
  }
+ 
+ function sen(){
+
+ 	numeros= document.getElementById("valores").value;
+      resultado=Math.sin(numeros)
+      document.kevin.valores.value=resultado;
+ 	
+ }
+ 
+ function cos(){
+
+ 	numeros= document.getElementById("valores").value;
+      resultado=Math.cos(numeros)
+      document.kevin.valores.value=resultado;
+ 	
+ }
+ 
+  function tan(){
+
+ 	numeros= document.getElementById("valores").value;
+      resultado=Math.tan(numeros)
+      document.kevin.valores.value=resultado;
+ 	
+ }
+ 
 
 //Signos
 function operar(numeros){
