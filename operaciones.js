@@ -11,11 +11,21 @@ function borrar()
 	document.kevin.valores.value="";
 
 }
-function square(kevin) 
-{
-	kevin.valores.value = eval(kevin.valores.value) * eval(kevin.valores.value)
-}
+function raiz(){
 
+ 	numeros= document.getElementById("valores").value;
+      resultado=Math.sqrt(numeros)
+      document.kevin.valores.value=resultado;
+ 	
+ }
+
+function potencia(){
+
+ 	numeros= document.getElementById("valores").value;
+      resultado=Math.pow((numeros), 2)
+      document.kevin.valores.value=resultado;
+ 	
+ }
 
 //Signos
 function operar(numeros){
