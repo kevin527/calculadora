@@ -88,10 +88,88 @@
     <td colspan="4"><label>
       <div align="center">
         <input type="button" value="=" onClick="calcular()" />
+        
         </div>
+        
     </label></td>
   </tr>
 </table>
 </form>
+
+ <input type="button"  value="Dibujar función sen(x)" onClick="dibujarSeno( 'sen' )">
+<p>&nbsp;</p>
+
+
+  <canvas id="canvas" width="700px" height="350px" style="border:solid #FF3333;">
+  </canvas>
+
+<script>
+function dibujarSeno( sen )
+{
+  var c = document.getElementById("canvas");
+  var dibujar = c.getContext("2d");
+  
+
+  
+
+  dibujar.moveTo(400, 0);
+  dibujar.lineTo(400, 700);
+  dibujar.lineTo(400, 200);
+  
+  dibujar.lineTo(0, 200);
+  dibujar.lineTo(700, 200);
+  
+  for(i = 0; i<500; i+=50){
+ 
+   dibujar.moveTo(400-i, 205);
+   dibujar.lineTo(400-i, 195);   
+ 
+   dibujar.moveTo(400+i, 205);
+   dibujar.lineTo(400+i, 195);
+  
+   dibujar.moveTo(405, 200+i);
+   dibujar.lineTo(395, 200+i);   
+  
+   dibujar.moveTo(405, 200-i);
+   dibujar.lineTo(395, 200-i);
+   
+   if(i > 0){	
+	dibujar.fillText('-'+i,400-(i+5), 215);
+	dibujar.fillText(i,400+(i-5), 215);
+	
+	dibujar.fillText('-'+i,410, 200+i+2);
+	dibujar.fillText(i,410, 200-i+2);
+   }
+   
+  } 
+ dibujar.moveTo(400, 200);
+ x1 = 400;
+ y1 = 208;
+ 
+ x2 = 400;
+ y2 = 208;
+ 
+
+ for (x = 0; x<400; x++){
+	y = Math.sin(x)		
+	p=x;
+	f = y*12; 
+	
+	x1 += p;
+	y1 -= f;
+    dibujar.moveTo(x1, y1);
+	dibujar.lineTo(x1-p, y1+f);
+	 
+	x2 -= p;
+	y2 -= f;
+    dibujar.moveTo(x2, y2);
+	dibujar.lineTo(x2+p, y2+f);
+	
+ }
+  dibujar.stroke();
+}
+
+</script>
+
 </body>
 </html>
